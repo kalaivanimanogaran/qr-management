@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<title>Hotal Menus</title>
+</head>
+<body>
+
+   <div class="hotal menu">
+
+    <div class="fastfood">
+       
+     <h1>Restaurant Menu</h1>
+
+    <!-- Dropdown menus -->
+    <div class="dropdown-container">
+      <div class="dropdown-group">
+         
+          <select id="category">
+             <option value="">Selected Category</option>
+              <option value="Starters">Starters</option>
+              <option value="Main Course">Main Course</option>
+              <option value="Desserts">Desserts</option>
+          </select>
+      </div>
+
+      <div class="dropdown-group">
+   
+          <select id="type">
+              <option value=""> Selected Types</option>
+              <option value="Veg">Veg</option>
+              <option value="Non-Veg">Non-veg</option>
+          </select>
+      </div>
+  </div>
+
+  <div id="menus" class="menus">
+   <!-- Dynamic menu items will be injected here -->
+</div>
+ <script src="dropdown.js"></script>
+ 
