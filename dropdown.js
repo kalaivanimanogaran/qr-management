@@ -57,25 +57,32 @@ function filterMenu() {
   // Clear the existing menu display
   menuContainer.innerHTML = '';
 
-  // Display the filtered menu items
+
   filteredItems.forEach(item => {
     const menuItemDiv = document.createElement('div');
     menuItemDiv.classList.add('menu-item');
+  
+    // Remove any '$' symbol from the price and then add ₹ symbol
+    const price = item.price.replace('$', ''); // Remove dollar sign
+  
     menuItemDiv.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
       <p>${item.name}</p>
       <p>Category: ${item.category}</p>
       <p>Type: ${item.type}</p>
-      <h6>${item.price}</h6>
+      <h6>₹${price}</h6> <!-- Display ₹ symbol with cleaned price -->
       <a href=""><button class="btn">Order</button></a>
     `;
     menuContainer.appendChild(menuItemDiv);
   });
+  
+
 }
 
 // Add event listeners to dropdowns to trigger filtering when values change
 categoryDropdown.addEventListener('change', filterMenu);
 typeDropdown.addEventListener('change', filterMenu);
 
-// Initially display all menu items (optional)
-filterMenu();
+// Initily display all menu items (optional)
+filterMenu(); 
+
