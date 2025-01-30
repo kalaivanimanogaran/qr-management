@@ -12,7 +12,7 @@ const menuItems = [
   { id: 'menu-4', name: 'big Hotdog', category: 'Main Course', type: 'Non-Veg', price: '$110.00', image: 'images/menu4.png' },
   { id: 'menu-5', name: 'French Fries', category: 'Starters', type: 'Veg', price: '$120.00', image: 'images/menu5.png' },
   { id: 'menu-6', name: 'Chicken Wings', category: 'Starters', type: 'Non-Veg', price: '$150.00', image: 'images/menu6.png' },
-  { id: 'menu-7', name: 'Panner Butter Masala', category: 'Main Course', type: 'Non-Veg', price: '$150.00', image: 'images/menu7.png' },
+  { id: 'menu-7', name: 'Panner Butter Masala', category: 'Main Course', type: 'Veg', price: '$150.00', image: 'images/menu7.png' },
   { id: 'menu-31', name: 'Chocolate Brownie', category: 'Desserts', type: 'Veg', price: '$150.00', image: 'images/menu31.png' },
   { id: 'menu-8', name: 'veg biryani', category: 'Main Course', type: 'Veg', price: '$180.00', image: 'images/menu8.png' },
   { id: 'menu-9', name: 'Dal Tadka', category: 'Main Course', type: 'Veg', price: '$110.00', image: 'images/menu9.png' },

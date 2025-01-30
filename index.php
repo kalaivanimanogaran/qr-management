@@ -1,3 +1,4 @@
+
 <?php
 // Include the database connection file (menu.php)
 include('menus.php');
@@ -23,8 +24,6 @@ $result = $conn->query($sql);
     }
     ?>
 
-</body>
-</html>
 
 <?php
 // Close the database connection

@@ -1,9 +1,9 @@
 <?php
 // Database connection
 $servername = "localhost";
-$username = "root"; // or your MySQL username
-$password = ""; // or your MySQL password
-$dbname = "restaurant menu";
+$username = "root";
+$password = ""; 
+$dbname = "restaurant menu"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,21 +13,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Insert data into the 'menus' table (only run this once when needed)
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Insert query
-    $sql = //"INSERT INTO menus (name, category, type, price, image) 
-            //VALUES 
-            //('big burger', 'Main Course', 'Non-Veg', 100.00, 'images/menu1.png'),
-            //('vegetable pizza', 'Main Course', 'Veg', 130.00, 'images/menu2.png')"; // Add more items as needed
-            "INSERT INTO menus (name, category, type, price, image) VALUES
+
+    // Insert data into the 'menus' table
+    $sql = "INSERT INTO menus (name, category, type, price, image) VALUES
             ('big burger', 'Main Course', 'Non-Veg', 100.00, 'images/menu1.png'),
             ('vegetable pizza', 'Main Course', 'Veg', 130.00, 'images/menu2.png'),
             ('kabab turki', 'Main Course', 'Non-Veg', 140.00, 'images/menu3.png'),
             ('big Hotdog', 'Main Course', 'Non-Veg', 110.00, 'images/menu4.png'),
             ('French Fries', 'Starters', 'Veg', 120.00, 'images/menu5.png'),
             ('Chicken Wings', 'Starters', 'Non-Veg', 150.00, 'images/menu6.png'),
-            ('Panner Butter Masala', 'Main Course', 'Non-Veg', 150.00, 'images/menu7.png'),
+            ('Panner Butter Masala', 'Main Course', 'Veg', 150.00, 'images/menu7.png'), 
             ('Chocolate Brownie', 'Desserts', 'Veg', 150.00, 'images/menu31.png'),
             ('veg biryani', 'Main Course', 'Veg', 180.00, 'images/menu8.png'),
             ('Dal Tadka', 'Main Course', 'Veg', 110.00, 'images/menu9.png'),
@@ -51,14 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ('Fish Curry', 'Main Course', 'Non-Veg', 150.00, 'images/menu15.png'),
             ('Rasgulla', 'Desserts', 'Veg', 100.00, 'images/menu32.png'),
             ('Carrot Halwa', 'Desserts', 'Veg', 100.00, 'images/menu34.png'),
-            ('Prawns Masala', 'Main Course', 'Veg', 130.00, 'images/menu16.png'),
+            ('Prawns Masala', 'Main Course', 'Non-Veg', 130.00, 'images/menu16.png'),
             ('Tiramisu', 'Desserts', 'Veg', 120.00, 'images/menu35.png'),
-            ('Kulfi', 'Desserts', 'Veg', 110.00, 'images/menu36.png')";
-            
+            ('Kulfi', 'Desserts', 'Veg', 110.00, 'images/menu36.png'),
+            ('Panner Tikka', 'Starters', 'Veg', 120.00, 'images/menu40.png')";
+
     if ($conn->query($sql) === TRUE) {
-        echo "New records created successfully";
+        echo "New menu records created successfully.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $conn->error;
     }
-}
+
+
 ?>
